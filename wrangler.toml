@@ -1,0 +1,7 @@
+name = "tg-proxy"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "BOT_DATA"
+id = "57a28ee349554e4299a3a622515da497"
