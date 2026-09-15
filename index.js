@@ -6,9 +6,8 @@ app.use(express.json());
 
 const TELEGRAM_API = 'https://api.telegram.org';
 
-app.all('/bot*', async (req, res) => {
-  const path = req.originalUrl;
-  const targetUrl = TELEGRAM_API + path;
+app.all('/*', async (req, res) => {
+  const targetUrl = TELEGRAM_API + req.originalUrl;
   try {
     const response = await fetch(targetUrl, {
       method: req.method,
